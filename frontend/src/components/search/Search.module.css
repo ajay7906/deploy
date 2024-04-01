@@ -1,0 +1,146 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    
+    margin-top: 2rem;
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    height: 30vh;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 8px;
+    width: 70vw;
+    position: relative;
+    box-shadow: 0px 0px 22px 4px #FF202040;
+    outline: none;
+  }
+  .inputSection{
+    display: flex;
+    
+    align-items: center;
+  }
+  .input {
+    flex: 1;
+    width: 60vw;
+    height: 3rem;
+    outline: none;
+    font-size: 20px;
+    padding-left: 2.8rem;
+    border: 1.8px solid #E3E3E3
+  }
+  
+  .searchbtns{
+    position: absolute;
+    width: 20px;
+   
+    margin-left: 18px;
+
+  }
+  .skillsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 64vw;
+    align-items: center;
+   
+    margin-top: 2rem;
+  }
+  .listSkill{
+  display: flex;
+  }
+  .listSkill select{
+    border: 2px solid #CECECE;
+    outline: none;
+    width: 6rem;
+    text-align: center;
+    color: #9C9C9C;
+    border-radius: 8px;
+    height: 2.8rem;
+    
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .6rem;
+    
+    margin-left: 1rem;
+  }
+  
+  .skill {
+    background: #FFEEEE;
+    width: 6rem;
+   
+    color: #333;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    margin-right: 4px;
+    
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+  }
+  .skillName{
+   display: flex;
+   align-items: center;
+   width: 3.9rem;
+   font-size: 1.1rem;
+   color: #000000;
+   
+
+  }
+  .skillText {
+    margin-right: 4px;
+  }
+  .closeButton{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    background: #FF6B6B;
+    height: 2.8rem;
+  
+    width: 2.1rem;
+    justify-content: center;
+    font-size: 1.7rem;
+    color: #ffffff;
+  }
+  .closeIcon {
+    cursor: pointer;
+   
+  }
+  
+  .filterButton {
+    background-color: #ff5a5f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  .clearButton {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+
+
+
+
+ 
