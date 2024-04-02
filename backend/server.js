@@ -35,7 +35,7 @@ app.use((error, req, res, next) => {
     res.status(500).json({ errorMessage: "Something went wrong!" });
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Backend server running at port ${PORT}`);

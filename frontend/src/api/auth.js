@@ -4,7 +4,8 @@ import { showToast } from '../components/showtoast/showToast';
 
 export const registerUser = async ({email, password, mobile,  name})=>{
     try {
-        const reqUrl = `http://localhost:3000/api/v1/auth/register`;
+        // const reqUrl = `http://localhost:3000/api/v1/auth/register`;
+        const reqUrl = `https://deploy-2-sqsr.onrender.com/`;
         const response =  await axios.post(reqUrl, {
             email,
             password,
@@ -33,7 +34,9 @@ export const registerUser = async ({email, password, mobile,  name})=>{
 
 export  const loginUser = async ({email, password})=>{
     try {
-        const reqUrl = `http://localhost:3000/api/v1/auth/login`;
+        // const reqUrl = `http://localhost:3000/api/v1/auth/login`;
+        const reqUrl = `https://deploy-2-sqsr.onrender.com/`;
+
         const response = await axios.post(reqUrl, {
             email,
             password
