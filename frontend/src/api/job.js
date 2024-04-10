@@ -1,7 +1,7 @@
 import axios from "axios";
 import { showToast } from "../components/showtoast/showToast";
 // const backendUrl = `http://localhost:3000/api/v1`;
-const backendUrl = `https://deploy-2-sqsr.onrender.com/`;
+const backendUrl = `https://backend-1luu.onrender.com/api/v1`;
 
 export const createJob = async (JobPostPayload) => {
     try {
