@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { registerUser } from '../../api/auth'
 import { toast } from 'react-toastify'
 import { showToast } from '../../components/showtoast/showToast'
+import { ColorRing } from 'react-loader-spinner'
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ function Register() {
 
     })
     const [checkedValue, setCheckedValue] = useState(false);
+    const [loadSubmit, setLoadSubmit] = useState(false)
     const navigate = useNavigate()
     const onChangeValue = (e) => {
         setFormData({
@@ -41,25 +43,25 @@ function Register() {
 
         }
         else {
-           
+            setLoadSubmit(true)
             const responce = await registerUser(formData)
             console.log(responce.success);
             if (responce.success) {
-                 showToast('register successful', { type: 'success' });
-                 localStorage.setItem('NameData', formData.name)
-                 console.log(formData);
-                 navigate('/login')
+                showToast('register successful', { type: 'success' });
+                localStorage.setItem('NameData', formData.name)
+                console.log(formData);
+                navigate('/login')
 
-                
+
             }
-            else{
-                 showToast(responce.errorMessage, { type: 'error' });
-                 console.log(responce.errorMessage);
+            else {
+                showToast(responce.errorMessage, { type: 'error' });
+                console.log(responce.errorMessage);
             }
         }
 
     }
-    
+
     console.log(formData);
     console.log('hhhg');
 
@@ -79,7 +81,21 @@ function Register() {
                         <label >By creating an account, I agree to our terms of use and privacy policy</label><br></br>
 
                     </div>
-                    <button onClick={onSubmitData}>Create Account</button>
+                    {
+                        loadSubmit ? <><button onClick={onSubmitData}>
+                            <ColorRing
+                                visible={true}
+                                height="50"
+                                width="80"
+                                ariaLabel="color-ring-loading"
+                                wrapperStyle={{}}
+                                wrapperClass="color-ring-wrapper"
+                                colors={['#002D62', '#72A0C1', '#0000FF', '#0000FF', '#00308F']} />
+                        </button></> : <><button onClick={onSubmitData}>
+                           Create Account
+
+                        </button></>
+                    }
                     <p>Already have an account? <Link to='/login'>Sign In</Link></p>
                 </div>
             </div>
